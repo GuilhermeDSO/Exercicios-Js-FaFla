@@ -17,7 +17,7 @@ const btns = [
     },
   },
   {
-    nome: "Ex. 3 - Maior, Menor ou igual a 10",
+    nome: "Ex. 3 - Maior, Menor ou Igual a 10",
     func: () => {
       const valor = Number(prompt("Digite um número:"));
       alert(valor > 10 ? "É MAIOR QUE 10!" : valor < 10 ? "É MENOR QUE 10!" : "É IGUAL A 10!");
@@ -27,7 +27,7 @@ const btns = [
     nome: "Ex. 4 - Positivo ou Negativo",
     func: () => {
       const valor = Number(prompt("Digite um número:"));
-      alert(valor > 0 ? "Positivo" : valor < 0 ?  "Negativo" : "0 É NEUTRO");
+      alert(valor > 0 ? "Positivo" : valor < 0 ? "Negativo" : "0 é Neutro");
     },
   },
   {
@@ -36,7 +36,7 @@ const btns = [
       const anoAtual = Number(prompt("Ano atual:"));
       const nascimento = Number(prompt("Ano de nascimento:"));
       const idade = anoAtual - nascimento;
-      alert(idade >= 16 ? "Pode votar." : "Não pode votar.");
+      alert(idade >= 16 ? `Idade :${idade} - Pode votar` : `Idade : ${idade} - Não pode votar.`);
     },
   },
   {
@@ -52,10 +52,10 @@ const btns = [
     func: () => {
       const a = Number(prompt("Digite o dividendo:"));
       const b = Number(prompt("Digite o divisor:"));
-      if(b === 0){
-        alert("Divisão por zero"); 
-      }else {
-        alert(`Resultado : ${a/b}`)
+      if (b === 0) {
+        alert("Divisão por zero!");
+      } else {
+        alert(`Resultado: ${a / b}`);
       }
     },
   },
@@ -72,7 +72,7 @@ const btns = [
     func: () => {
       const a = Number(prompt("Digite o primeiro número:"));
       const b = Number(prompt("Digite o segundo número:"));
-      alert(`Resultado: ${a / b}`);
+      alert(`Resultado: ${a * b}`);
     },
   },
   {
@@ -80,23 +80,20 @@ const btns = [
     func: () => {
       const a = Number(prompt("Digite o primeiro número:"));
       const b = Number(prompt("Digite o segundo número:"));
-
-      if (a === b){
-        alert   (`${a} e ${b} são iguais`);
-      }
-      else if (a > b){
-        alert (`${a} é maior que  ${b}`);
-      }
-      else {
-        alert(`${b} é maior que ${a}`);
+      if (a === b) {
+        alert(`${a} e ${b} são iguais`);
+      } else if (a > b) {
+        alert(`${a} > ${b}`);
+      } else {
+        alert(`${b} > ${a}`);
       }
     },
-  },
+},
   {
     nome: "Ex. 11 - 1 a 10",
     func: () => {
       let resultado = "";
-      for (let i = 1; i <= 9; i++) resultado += i + " ";
+      for (let i = 1; i <= 10; i++) resultado += i + " ";
       alert(resultado);
     },
   },
@@ -112,7 +109,7 @@ const btns = [
     nome: "Ex. 13 - 100 a 1",
     func: () => {
       let resultado = "";
-      for (let i = 101; i >= 1; i--) resultado += i + " ";
+      for (let i = 100; i >= 1; i--) resultado += i + " ";
       alert(resultado);
     },
   },
@@ -138,7 +135,7 @@ const btns = [
       let pares = 0;
       for (let i = 0; i < 10; i++) {
         let num = Number(prompt(`Digite o número ${i + 1}:`));
-        if (num % 2 === 1) pares++;
+        if (num % 2 === 0) pares++;
       }
       alert(`Quantidade de pares: ${pares}`);
     },
@@ -146,7 +143,7 @@ const btns = [
   {
     nome: "Ex. 17 - Maior de 5 números",
     func: () => {
-      let maior = 0;
+      let maior = -Infinity;
       for (let i = 0; i < 5; i++) {
         let num = Number(prompt(`Digite o número ${i + 1}:`));
         if (num > maior) maior = num;
@@ -158,7 +155,7 @@ const btns = [
     nome: "Ex. 18 - Média de 5 Notas",
     func: () => {
       let soma = 0;
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 5; i++) {
         soma += Number(prompt(`Digite a nota ${i + 1}:`));
       }
       alert(`Média: ${(soma / 5).toFixed(2)}`);
